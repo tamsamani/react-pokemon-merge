@@ -1,12 +1,14 @@
-import type { definePokemonType } from '../Types.d';
-import { PKMN_TYPE_INDEX } from './index';
+import type { TypeModel } from '../types.d';
+import type { defineTypeModel } from './core';
+import { PKMN_TYPE_INDEX } from './core';
 
-export type None = definePokemonType<'NONE', PKMN_TYPE_INDEX.NONE>;
+export type None = defineTypeModel<'NONE', PKMN_TYPE_INDEX.NONE, TypeModel>;
 
 const NoneType: None = {
-  name: 'None',
+  name: 'none',
   index: PKMN_TYPE_INDEX.NONE,
-  color: '#111111',
+  color: '#41685D',
+  effects: {},
 };
 
 export default NoneType;

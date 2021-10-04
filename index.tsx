@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import './style.css';
 import Types from './modules/Types';
-import type { PKMN_TYPE } from './modules/Types';
+import type { PKMN_TYPE } from './modules/types/core';
 
 console.log(Types);
 
 interface TypeBadgeProps {
-  type: PKMN_TYPE
+  type: PKMN_TYPE;
 }
 
 const TypeBadge = ({ type }) => <div className="type-badge">{type.name}</div>;
